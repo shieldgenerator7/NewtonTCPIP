@@ -14,20 +14,17 @@ public class InputManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Keyboard controls
         float xAxis = Input.GetAxis("Horizontal");
         playerController.moveHorizontally(xAxis);
-        float yAxis = Input.GetAxis("Vertical");
-        if (yAxis > 0)
-        {
-            playerController.jump(yAxis);
-        }
         if (Input.GetButton("Jump"))
         {
             playerController.jump(1);
         }
+        //Be sure to cancel the jump when the player stops jumping
+        //*This is IMPORTANT*
         else if (Input.GetButtonUp("Jump"))
         {
             playerController.cancelJump();

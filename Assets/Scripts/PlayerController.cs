@@ -8,8 +8,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 7.0f;
     public float jumpSpeed = 5.0f;
     public float jumpDuration = 0.1f;//how long the jump can be 
+    public int maxJumpCount = 2;//how many jumps per ground he can do (2 = "double jump")
 
     private float lastGroundTime;//the last time he was on the ground
+    [SerializeField]
+    private int jumpCount = 0;
 
     private Rigidbody rb;
 
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
         if (collision.contacts[0].point.y <= transform.position.y)
         {
             lastGroundTime = Time.time;
+            jumpCount = 0;
         }
     }
 
@@ -59,6 +63,11 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
+            jumpCount++;
+            if (jumpCount < maxJumpCount)
+            {
+                lastGroundTime = Time.time;
+            }
         }
     }
 }
