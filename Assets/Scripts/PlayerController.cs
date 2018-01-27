@@ -83,6 +83,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void respawn()
     {
-        transform.position = Vector3.zero;
+        CheckpointChecker.respawnPlayer(gameObject);
     }
 }

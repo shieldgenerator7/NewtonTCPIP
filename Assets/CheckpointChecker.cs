@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PitTrap : MonoBehaviour {
+public class CheckpointChecker : MonoBehaviour {
+
+    public static CheckpointChecker currentCP;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +15,12 @@ public class PitTrap : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerController>().respawn();
+            currentCP = this;
         }
+    }
+
+    public static void respawnPlayer(GameObject go)
+    {
+        go.transform.position = currentCP.gameObject.transform.position;
     }
 }
