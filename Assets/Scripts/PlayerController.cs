@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 7.0f;
     public float jumpSpeed = 5.0f;
+    public float jumpDuration = 0.1f;//how long the jump can be 
+
+    private float lastGroundTime;//the last time he was on the ground
 
     private Rigidbody rb;
 
@@ -20,6 +23,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.contacts[0].point.y <= transform.position.y)
+        {
+            lastGroundTime = Time.time;
+        }
     }
 
     /// <summary>
@@ -38,7 +49,16 @@ public class PlayerController : MonoBehaviour
     /// <param name="jumpAmount"></param>
     public void jump(float jumpAmount)
     {
-        jumpAmount = Mathf.Max(0, jumpAmount);
-        rb.velocity = new Vector2(rb.velocity.x, jumpAmount * jumpSpeed);
+        if (Time.time <= lastGroundTime + jumpDuration) {
+            jumpAmount = Mathf.Max(0, jumpAmount);
+            rb.velocity = new Vector2(rb.velocity.x, jumpAmount * jumpSpeed);
+        }
+    }
+    public void cancelJump()
+    {
+        if (rb.velocity.y > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+        }
     }
 }

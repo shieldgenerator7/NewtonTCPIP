@@ -28,5 +28,9 @@ public class InputManager : MonoBehaviour
         {
             playerController.jump(1);
         }
+        else if (Input.GetButtonUp("Jump"))
+        {
+            playerController.cancelJump();
+        }
     }
 }
