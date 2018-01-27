@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
         }
         //Be sure to cancel the jump when the player stops jumping
         //*This is IMPORTANT*
-        else if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump"))
         {
             playerController.cancelJump();
         }

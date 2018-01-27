@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float lastGroundTime;//the last time he was on the ground
     [SerializeField]
     private int jumpCount = 0;
+    private bool jumpStarted = false;
 
     private Rigidbody rb;
 
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             lastGroundTime = Time.time;
             jumpCount = 0;
+            jumpStarted = false;
         }
     }
 
@@ -53,6 +55,12 @@ public class PlayerController : MonoBehaviour
     /// <param name="jumpAmount"></param>
     public void jump(float jumpAmount)
     {
+        if (!jumpStarted)
+        {
+            jumpStarted = true;
+            jumpCount++;
+            lastGroundTime = Time.time;
+        }
         if (Time.time <= lastGroundTime + jumpDuration) {
             jumpAmount = Mathf.Max(0, jumpAmount);
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount * jumpSpeed);
@@ -63,10 +71,9 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            jumpCount++;
             if (jumpCount < maxJumpCount)
             {
-                lastGroundTime = Time.time;
+                jumpStarted = false;
             }
         }
     }
