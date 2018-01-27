@@ -48,4 +48,8 @@ public class LevelManager : MonoBehaviour
             currentLevel = SceneManager.GetSceneByName("Level" + currentLevelNumber);
         }
     }
+
+	void Update(){
+		if(Input.GetKeyDown(KeyCode.P)){LoadNextLevel ();}
+	}
 }
