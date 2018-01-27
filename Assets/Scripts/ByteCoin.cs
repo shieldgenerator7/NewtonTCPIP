@@ -18,6 +18,7 @@ public class ByteCoin : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             valueCollected += value;
+            BackgroundPicPiecer.ShowPixels(value);
             Destroy(gameObject);
         }
     }
