@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class CheckpointChecker : MonoBehaviour {
 
+    /// <summary>
+    /// Set this to true to have Newton start here
+    /// </summary>
+    public bool startCheckPoint = false;
+
     public static CheckpointChecker currentCP;
 
 	// Use this for initialization
 	void Start () {
-		
+		if (startCheckPoint)
+        {
+            currentCP = this;
+            respawnPlayer(GameObject.FindGameObjectWithTag("Player"));
+        }
 	}
 
     private void OnTriggerEnter(Collider other)
