@@ -77,4 +77,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Resets the player's position after he fails
+    /// </summary>
+    public void respawn()
+    {
+        transform.position = Vector3.zero;
+    }
 }
