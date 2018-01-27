@@ -24,5 +24,9 @@ public class InputManager : MonoBehaviour
         {
             playerController.jump(yAxis);
         }
+        if (Input.GetButton("Jump"))
+        {
+            playerController.jump(1);
+        }
     }
 }
