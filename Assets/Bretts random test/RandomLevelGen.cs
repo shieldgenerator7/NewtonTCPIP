@@ -8,21 +8,22 @@ public class RandomLevelGen : MonoBehaviour {
 
 	GameObject startPos;
 	int ObsticalNumber = 20;
-	float spacer = .6f;
-//	float holdPos = 0f;
+	float spacer = .6f;				// this will need to be more dynamic based on next platform
 	Vector3 holdPos;
 	public GameObject endPos;
 
-	public GameObject[] theObsticals = new GameObject[4];
+
+	int platformCount = 0;
+	public static GameObject[] theObsticals;
 
 	public GameObject tempBox;
 
 	int tracker=0;
 
 	void Start () {
-		
+		theObsticals = Resources.LoadAll<GameObject> ("RandomPlatformSegment");
 		startPos = GameObject.Find ("StartPos");
-		holdPos = startPos.transform.position;
+		holdPos =  new Vector3(startPos.transform.position.x+spacer,.2f,0);
 		MixLevel ();
 
 	}
@@ -33,8 +34,7 @@ public class RandomLevelGen : MonoBehaviour {
 		GameObject theObstical;
 
 		for (int i = 0; i < ObsticalNumber; i++) {
-			Debug.Log (holdPos);
-			randomThing = Random.Range (0, 4);
+			randomThing = Random.Range (0, theObsticals.Length);
 	//		tempPos = new Vector3 (holdPos, 0, 0);
 			theObstical = theObsticals [randomThing];
 			Instantiate (theObstical, tempPos, Quaternion.identity);
