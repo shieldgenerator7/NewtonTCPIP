@@ -389,9 +389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   facingRight: 1
-  sounds: {fileID: 1971920118}
-  newtonDeathSound: {fileID: 8300000, guid: 410391ae5b6775b46929bd065d278439, type: 3}
-  soundVolume: 1
 --- !u!54 &1971920110
 Rigidbody:
   m_ObjectHideFlags: 0
