@@ -171,6 +171,7 @@ MonoBehaviour:
   maxJumpCount: 2
   jumpCount: 0
   jumpStarted: 0
+  stretchSquash: 1.2
 --- !u!114 &114544232402405656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,5 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   maxHealth: 10
+  pushForce: 10
+  stunDuration: 3
   playerHoldPoint: {fileID: 1790402784716512}
   health: 0
+  playerRiding: 0

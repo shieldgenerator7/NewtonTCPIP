@@ -14,12 +14,31 @@ public class JumpAbility : MonoBehaviour {
     [SerializeField]
     private bool jumpStarted = false;
 
+    [Range(1.0f, 2.0f)]
+    public float stretchSquash = 1.1f;//0=normal, 1/2 = squash, 2 = stretch
+    private float stretchSize = 1;
+    private float squashSize = 1;
+    private Vector3 startSize;
+
     private Rigidbody rb;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        startSize = transform.localScale;
+        stretchSize = stretchSquash;
+        squashSize = 1 / stretchSquash;
+    }
+
+    private void Update()
+    {
+        float sign = Mathf.Sign(transform.localScale.x);
+        transform.localScale = Vector3.MoveTowards(
+            transform.localScale,
+            new Vector3(sign * startSize.x / stretchSquash, startSize.y * stretchSquash, startSize.z),
+            0.25f
+            );
     }
 
     private void OnCollisionStay(Collision collision)
@@ -29,6 +48,7 @@ public class JumpAbility : MonoBehaviour {
             lastGroundTime = Time.time;
             jumpCount = 0;
             jumpStarted = false;
+            stretchSquash = 1;
         }
     }
     /// <summary>
@@ -42,11 +62,16 @@ public class JumpAbility : MonoBehaviour {
             jumpStarted = true;
             jumpCount++;
             lastGroundTime = Time.time;
+            stretchSquash = stretchSize;
         }
         if (Time.time <= lastGroundTime + jumpDuration)
         {
             jumpAmount = Mathf.Max(0, jumpAmount);
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount * jumpSpeed);
+        }
+        else
+        {
+            stretchSquash = squashSize;
         }
     }
     public void cancelJump()
@@ -58,6 +83,7 @@ public class JumpAbility : MonoBehaviour {
             {
                 jumpStarted = false;
             }
+            stretchSquash = squashSize;
         }
     }
 }
