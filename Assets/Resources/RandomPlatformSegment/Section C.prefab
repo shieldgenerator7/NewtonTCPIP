@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 1984947389317602}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.8517361, y: 1.670594, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 4
@@ -401,7 +401,7 @@ Transform:
   m_GameObject: {fileID: 1322106016004368}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 3.806736, y: 2.970594, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 7
@@ -414,7 +414,7 @@ Transform:
   m_GameObject: {fileID: 1578927815742400}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 5.1267357, y: 0.41309422, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 9
@@ -440,7 +440,7 @@ Transform:
   m_GameObject: {fileID: 1867129843217372}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 3.806736, y: 3.5530937, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 8
@@ -453,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 1640093975560256}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.8517361, y: 1.1405939, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 3
@@ -505,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 1111720810455684}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 2.829236, y: 2.3430934, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 5
@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 1948305176571314}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 2.829236, y: 2.970594, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_Children: []
   m_Father: {fileID: 4316371694649088}
   m_RootOrder: 6
@@ -1323,6 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!114 &114228477169928354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1345,6 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!114 &114395007044481672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1367,6 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!114 &114458418764414880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1378,6 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!114 &114535088103030474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,6 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!114 &114672984754781920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1422,6 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!114 &114916558797150706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1433,6 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439edc04e8a0dd74485adc21d5343fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!135 &135017566238769802
 SphereCollider:
   m_ObjectHideFlags: 1
