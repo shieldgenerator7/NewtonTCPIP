@@ -17,7 +17,18 @@ public class PitTrap : MonoBehaviour {
         }
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            if (!other.gameObject.GetComponent<Enemy>().dead)
+            {
+                EnemyBOSS enemyBOSS = other.gameObject.GetComponent<EnemyBOSS>();
+                if (enemyBOSS != null)
+                {
+                    enemyBOSS.kill();
+                }
+                else
+                {
+                    Destroy(other.gameObject);
+                }
+            }
         }
     }
 }

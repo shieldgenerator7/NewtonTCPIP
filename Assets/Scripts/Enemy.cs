@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour {
     private float stunDuration;//if its stunned, how long for
     private float lastStunTime;//the last time it was stunned
 
+    public bool dead = false;
+
     protected Vector3 startPos;
     protected Rigidbody rb;
     protected GameObject player;
@@ -22,7 +24,7 @@ public class Enemy : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !dead)
         {
             CheckpointChecker.respawnPlayer(collision.gameObject);
             transform.position = startPos;
