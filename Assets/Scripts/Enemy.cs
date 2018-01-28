@@ -28,9 +28,15 @@ public class Enemy : MonoBehaviour {
             transform.position = startPos;
             onCollisionExtra();
         }
+        otherCollisionExtra(collision);
     }
 
     protected virtual void onCollisionExtra()
+    {
+
+    }
+
+    protected virtual void otherCollisionExtra(Collision coll)
     {
 
     }

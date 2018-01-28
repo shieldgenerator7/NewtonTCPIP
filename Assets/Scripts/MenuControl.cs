@@ -18,6 +18,8 @@ public class MenuControl : MonoBehaviour {
 
 			if (myJob == "PlayLevel")
 				PlayLevel ();
+			else if (myJob == "BossBattle")
+				BossLevel ();
 			else if (myJob == "RandomLevel")
 				RandomLevel ();
 			else if (myJob == "CreditsScreen")
@@ -31,6 +33,10 @@ public class MenuControl : MonoBehaviour {
 
 	void PlayLevel(){
 			SceneManager.LoadScene ("Level1",LoadSceneMode.Additive);
+	}
+
+	void BossLevel(){
+		SceneManager.LoadScene ("Level5",LoadSceneMode.Additive);
 	}
 
 	void RandomLevel(){

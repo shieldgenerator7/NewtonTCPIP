@@ -15,5 +15,9 @@ public class PitTrap : MonoBehaviour {
         {
             other.gameObject.GetComponent<PlayerController>().respawn();
         }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
