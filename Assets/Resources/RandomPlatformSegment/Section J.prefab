@@ -1446,6 +1446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114154317277020986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1472,6 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114303948069715298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1519,6 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114629984466943102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1553,6 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!135 &135071631647027856
 SphereCollider:
   m_ObjectHideFlags: 1

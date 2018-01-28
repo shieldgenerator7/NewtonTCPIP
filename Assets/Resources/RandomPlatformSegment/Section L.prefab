@@ -2253,6 +2253,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114081288192921502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2265,6 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114117085454497726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2282,6 +2286,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114207684950661302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2316,6 +2323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114278700092465130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2328,6 +2336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114283292749657552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2354,6 +2363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114337881635353494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2366,6 +2376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114406013501254228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2400,6 +2411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114517319993203878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2424,6 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114740351619231682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2436,6 +2449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114809002554420114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2471,6 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!135 &135054392134832074
 SphereCollider:
   m_ObjectHideFlags: 1

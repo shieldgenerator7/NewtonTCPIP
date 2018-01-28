@@ -2873,6 +2873,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114138751795641230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2890,6 +2893,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114146032376017754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2907,6 +2913,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114170814337211418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2919,6 +2928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114278141379754344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2931,6 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114343683313927716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2960,6 +2971,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114438852047751014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2972,6 +2986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114478171984167402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2989,6 +3004,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114512318634471206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3006,6 +3024,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114569220217783364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3054,6 +3075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114679619875659632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3077,6 +3099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114750162579834206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3101,6 +3124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114762309859685218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3113,6 +3137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114806936277125462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3142,6 +3167,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114828759787175318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3159,6 +3187,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114847363839757426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3171,6 +3202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114967601115033378
 MonoBehaviour:
   m_ObjectHideFlags: 1

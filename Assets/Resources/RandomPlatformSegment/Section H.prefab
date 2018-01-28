@@ -1702,6 +1702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114269853165224886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1736,6 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114413378526492058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1759,6 +1761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114651801836971214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1771,6 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114706465175769264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1783,6 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114815707779254518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1823,6 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!135 &135229676871223446
 SphereCollider:
   m_ObjectHideFlags: 1
