@@ -36,11 +36,30 @@ public class PlayerController : MonoBehaviour
     public void moveHorizontally(float direction)
     {
         rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+        Flip(direction);
     }
 
-	public void Flip()
+    public void Flip(float dir)
+    {
+        if (dir != 0)
+        {
+            if (dir < 0 && facingRight || dir > 0 && !facingRight)
+            {
+                Flip(dir > 0);
+            }
+        }
+    }
+
+	public void Flip(bool right)
 	{
-		
+        facingRight = right;
+        float r = 1;
+		if (!right)
+        {
+            r = -1;
+        }
+        Vector3 cs = transform.localScale;
+        transform.localScale = new Vector3(Mathf.Abs(cs.x) * r, cs.y, cs.z);
 	}
 
     /// <summary>
