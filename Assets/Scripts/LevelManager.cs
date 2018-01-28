@@ -56,7 +56,10 @@ public class LevelManager : MonoBehaviour
             if (SceneManager.GetSceneByName("Level" + currentLevelNumber).isLoaded)
             {
                 SceneManager.UnloadSceneAsync("Level" + currentLevelNumber);
-            }
+			}else if (SceneManager.GetSceneByName("RandomLevel").isLoaded)
+				{
+				SceneManager.UnloadSceneAsync("RandomLevel");
+				}
             SceneManager.LoadScene("Level" + levelNumber, LoadSceneMode.Additive);
             currentLevelNumber = levelNumber;
             currentLevel = SceneManager.GetSceneByName("Level" + currentLevelNumber);

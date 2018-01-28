@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Timers;
+using UnityEngine.SceneManagement;
 
 
 public class RandomLevelGen : MonoBehaviour {
@@ -38,17 +39,18 @@ public class RandomLevelGen : MonoBehaviour {
 		int randomThing;
 		Vector3 tempPos = holdPos;
 		GameObject theObstical;
+		GameObject tempObj;
 
 		for (int i = 0; i < lvmgr.RandomLevelStageNumber; i++) {
 			randomThing = Random.Range (0, theObsticals.Length);
 	//		tempPos = new Vector3 (holdPos, 0, 0);
 			theObstical = theObsticals [randomThing];
-			Instantiate (theObstical, tempPos, Quaternion.identity);
+			tempObj = Instantiate (theObstical, tempPos, Quaternion.identity);
 		
 		//	holdPos = transform.InverseTransformPoint(theObstical.transform.Find ("exitPoint").transform.localPosition);
 			holdPos = theObstical.transform.Find ("exitPoint").transform.position;
 
-
+			SceneManager.MoveGameObjectToScene (tempObj,SceneManager.GetSceneByName("RandomLevel"));
 
 			tempPos = tempPos + holdPos;
 
@@ -65,6 +67,7 @@ public class RandomLevelGen : MonoBehaviour {
 
 
 		}
-		Instantiate (endPos, tempPos, Quaternion.identity);
-	}
+		tempObj = Instantiate (endPos, tempPos, Quaternion.identity);
+		SceneManager.MoveGameObjectToScene (tempObj,SceneManager.GetSceneByName("RandomLevel"));
+	}	
 }
