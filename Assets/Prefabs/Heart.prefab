@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4310747220457070}
   - component: {fileID: 33758231265682754}
   - component: {fileID: 23268338675888670}
+  - component: {fileID: 95285687648832434}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -82,3 +83,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1794134618073962}
   m_Mesh: {fileID: 4300000, guid: 20b1bc866c359f94e8a4330a162b6c97, type: 3}
+--- !u!95 &95285687648832434
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794134618073962}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e6e96cd0c9647b45abb269e2adfdc14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
