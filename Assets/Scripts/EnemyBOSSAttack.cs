@@ -65,11 +65,12 @@ public class EnemyBOSSAttack : MonoBehaviour
             int randex = Random.Range(0, enemyPrefabs.Count);
             GameObject enemy = GameObject.Instantiate(enemyPrefabs[randex]);
             enemy.transform.position = transform.position + Vector3.up * transform.localScale.y * 2;
-            enemy.GetComponent<Rigidbody2D>().velocity = 
+            enemy.GetComponent<Rigidbody>().velocity = 
                 rb.velocity 
                 + Vector3.up 
                 + (Vector3.right * (pc.gameObject.transform.position.x - transform.position.x));
             enemy.GetComponent<Enemy>().stun(1.5f);
+            enemy.AddComponent<OnTouchDestroy>();
             SceneManager.MoveGameObjectToScene(enemy, LevelManager.Level);
         }
         if (jumpAmount > 0)
