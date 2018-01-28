@@ -14,6 +14,8 @@ public class BackgroundPicPiecer : MonoBehaviour
 	public GameObject camman;
 	public Vector3 background = new Vector3(0,0,60);
 
+    private int pixelsLeft = 0;//how many pixels are left to uncover
+
     // Use this for initialization
     void Start()
     {
@@ -28,6 +30,7 @@ public class BackgroundPicPiecer : MonoBehaviour
                 t.gameObject.SetActive(false);
             }
         }
+        pixelsLeft = pieces.Count;
 
 		camman = GameObject.Find ("Main Camera");	
     }
@@ -46,9 +49,22 @@ public class BackgroundPicPiecer : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            int index = Random.Range(0, pieces.Count);
-            pieces[index].SetActive(true);
-            pieces.RemoveAt(index);
+            if (pixelsLeft > 0)
+            {
+                int index = Random.Range(0, pieces.Count);
+                GameObject go = pieces[index];
+                while (go == null)
+                {
+                    index++;
+                    if (index >= pieces.Count)
+                    {
+                        index = 0;
+                    }
+                }
+                go.SetActive(true);
+                pieces.RemoveAt(index);
+                pixelsLeft--;
+            }
         }
     }
 
