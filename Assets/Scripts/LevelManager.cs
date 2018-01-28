@@ -33,6 +33,10 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            if (SceneManager.GetSceneByName("Level" + debugStartLevelNumber).isLoaded)
+            {
+                SceneManager.UnloadSceneAsync("Level" + debugStartLevelNumber);
+            }
             LoadLevel(debugStartLevelNumber);
         }
 
