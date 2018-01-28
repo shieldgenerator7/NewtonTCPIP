@@ -32,5 +32,9 @@ public class CheckpointChecker : MonoBehaviour {
     {
         go.transform.position = currentCP.gameObject.transform.position;
         go.GetComponent<PlayerController>().rideSnail(null, false);
+        foreach(SnailController sc in FindObjectsOfType<SnailController>())
+        {
+            sc.playerRiding = false;
+        }
     }
 }
