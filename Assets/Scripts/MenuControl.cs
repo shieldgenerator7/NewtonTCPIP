@@ -32,11 +32,13 @@ public class MenuControl : MonoBehaviour {
 	}
 
 	void PlayLevel(){
-			SceneManager.LoadScene ("Level1",LoadSceneMode.Additive);
+	//		SceneManager.LoadScene ("Level1",LoadSceneMode.Additive);
+		LevelManager.LoadLevel (1);
 	}
 
 	void BossLevel(){
-		SceneManager.LoadScene ("Level5",LoadSceneMode.Additive);
+	//	SceneManager.LoadScene ("Level5",LoadSceneMode.Additive);
+		LevelManager.LoadLevel (5);
 	}
 
 	void RandomLevel(){
