@@ -23,7 +23,8 @@ public class RandomLevelGen : MonoBehaviour {
 	void Start () {
 		theObsticals = Resources.LoadAll<GameObject> ("RandomPlatformSegment");
 		startPos = GameObject.Find ("StartPos");
-		holdPos =  new Vector3(startPos.transform.position.x+spacer,.2f,0);
+		holdPos =  new Vector3(startPos.transform.position.x+spacer,.2f,0); // starting segment
+
 		MixLevel ();
 
 	}
@@ -41,10 +42,13 @@ public class RandomLevelGen : MonoBehaviour {
 		
 		//	holdPos = transform.InverseTransformPoint(theObstical.transform.Find ("exitPoint").transform.localPosition);
 			holdPos = theObstical.transform.Find ("exitPoint").transform.position;
+
+
+
 			tempPos = tempPos + holdPos;
 
 
-			tempPos = new Vector3 (tempPos.x + spacer, tempPos.y, 0);
+		tempPos = new Vector3 (tempPos.x + spacer, tempPos.y, 0);
 	//		holdPos = exitPos.transform.position;
 	//		exitPos = theObstical.GetComponentsInChildren<exitPoint>;
 	//		holdPos = myPos.transform.position;
