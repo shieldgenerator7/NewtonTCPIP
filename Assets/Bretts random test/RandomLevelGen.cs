@@ -19,8 +19,13 @@ public class RandomLevelGen : MonoBehaviour {
 	public GameObject tempBox;
 
 	int tracker=0;
+	public LevelManager lvmgr;
+
 
 	void Start () {
+		GameObject mgr = GameObject.Find ("GameManager");
+		lvmgr = mgr.GetComponent <LevelManager>();
+
 		theObsticals = Resources.LoadAll<GameObject> ("RandomPlatformSegment");
 		startPos = GameObject.Find ("StartPos");
 		holdPos =  new Vector3(startPos.transform.position.x+spacer,.2f,0); // starting segment
@@ -34,7 +39,7 @@ public class RandomLevelGen : MonoBehaviour {
 		Vector3 tempPos = holdPos;
 		GameObject theObstical;
 
-		for (int i = 0; i < ObsticalNumber; i++) {
+		for (int i = 0; i < lvmgr.RandomLevelStageNumber; i++) {
 			randomThing = Random.Range (0, theObsticals.Length);
 	//		tempPos = new Vector3 (holdPos, 0, 0);
 			theObstical = theObsticals [randomThing];
