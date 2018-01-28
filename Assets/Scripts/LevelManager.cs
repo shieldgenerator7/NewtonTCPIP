@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public bool debug = false;
+    public int debugStartLevelNumber = 1;
 
     private Scene currentLevel;
     private int currentLevelNumber = 1;
@@ -25,10 +27,16 @@ public class LevelManager : MonoBehaviour
             throw new UnityException("Duplicate LevelManagers!");
         }
 
-		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Additive);
-        //LoadLevel(currentLevelNumber);
+        if (!debug)
+        {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        }
+        else
+        {
+            LoadLevel(debugStartLevelNumber);
+        }
 
-		RandomLevelStageNumber = 10;
+        RandomLevelStageNumber = 10;
     }
 
     public static void LoadNextLevel()
