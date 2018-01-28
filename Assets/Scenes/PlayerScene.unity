@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ed5623629932142aad3a99d98c6da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
-  debugStartLevelNumber: 2
+  debug: 1
+  debugStartLevelNumber: 7
   RandomLevelStageNumber: 0
 --- !u!1 &1971920108
 GameObject:

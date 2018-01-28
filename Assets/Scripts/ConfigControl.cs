@@ -10,9 +10,10 @@ public class ConfigControl : MonoBehaviour {
 		if (other.gameObject.CompareTag("Player"))
 		{
 			string myJob = this.name;
-			if (SceneManager.GetSceneByName("ControlSettings").isLoaded)
-			{
-				SceneManager.UnloadSceneAsync("ControlSettings");
+			if (SceneManager.GetSceneByName ("ControlSettings").isLoaded) {
+				SceneManager.UnloadSceneAsync ("ControlSettings");
+			} else if (SceneManager.GetSceneByName ("Level7").isLoaded) {
+				SceneManager.UnloadSceneAsync ("Level7");
 			}
 
 			if (myJob == "MainMenu")
