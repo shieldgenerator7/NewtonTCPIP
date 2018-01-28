@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 7.0f;   
+    public float moveSpeed = 7.0f;
+	public bool facingRight = true;
 
     private Rigidbody rb;
     private JumpAbility ja;
@@ -36,6 +37,11 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
     }
+
+	public void Flip()
+	{
+		
+	}
 
     /// <summary>
     /// Resets the player's position after he fails
