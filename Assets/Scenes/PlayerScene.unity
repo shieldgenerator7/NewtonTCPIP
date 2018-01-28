@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -268,6 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ed5623629932142aad3a99d98c6da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
+  debugStartLevelNumber: 1
   RandomLevelStageNumber: 0
 --- !u!1 &1971920108
 GameObject:
@@ -404,6 +406,7 @@ MonoBehaviour:
   maxJumpCount: 2
   jumpCount: 0
   jumpStarted: 0
+  stretchSquash: 1.1
 --- !u!95 &1971920116
 Animator:
   serializedVersion: 3
@@ -515,4 +518,3 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
-  stretchSquash: 1.3
