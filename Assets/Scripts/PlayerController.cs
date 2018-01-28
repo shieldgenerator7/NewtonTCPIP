@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 5.0f;
     public float jumpDuration = 0.1f;//how long the jump can be 
     public int maxJumpCount = 2;//how many jumps per ground he can do (2 = "double jump")
+	public bool facingRight;
 
     private float lastGroundTime;//the last time he was on the ground
     [SerializeField]
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		facingRight = true;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -77,6 +79,11 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+	public void Flip()
+	{
+		
+	}
 
     /// <summary>
     /// Resets the player's position after he fails
