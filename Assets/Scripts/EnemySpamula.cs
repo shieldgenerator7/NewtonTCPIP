@@ -18,24 +18,28 @@ public class EnemySpamula : Enemy {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        //If she's moving
-        if (Time.time <= chaseStartTime + chaseDuration)
+	void Update ()
+    {
+        if (!isStunned())
         {
-            if (true || Physics.Raycast(new Ray(transform.position, Vector3.down), 1))
+            //If she's moving
+            if (Time.time <= chaseStartTime + chaseDuration)
             {
-                rb.velocity = new Vector3(Mathf.Sign(player.transform.position.x - transform.position.x) * moveSpeed, rb.velocity.y);
+                if (true || Physics.Raycast(new Ray(transform.position, Vector3.down), 1))
+                {
+                    rb.velocity = new Vector3(Mathf.Sign(player.transform.position.x - transform.position.x) * moveSpeed, rb.velocity.y);
+                }
             }
-        }
-        //If her movement is off cooldown
-        if (Time.time > lastCooldownTime + cooldownDuration)
-        {
-            //If player is in range
-            if ((player.transform.position - transform.position).sqrMagnitude <= sightRange * sightRange)
+            //If her movement is off cooldown
+            if (Time.time > lastCooldownTime + cooldownDuration)
             {
-                chaseStartTime = Time.time;
-                //Pre-prepare the cooldown
-                lastCooldownTime = Time.time + chaseDuration + cooldownDuration;
+                //If player is in range
+                if ((player.transform.position - transform.position).sqrMagnitude <= sightRange * sightRange)
+                {
+                    chaseStartTime = Time.time;
+                    //Pre-prepare the cooldown
+                    lastCooldownTime = Time.time + chaseDuration + cooldownDuration;
+                }
             }
         }
 	}
