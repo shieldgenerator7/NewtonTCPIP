@@ -15,13 +15,11 @@ public class JumpAbility : MonoBehaviour {
     private bool jumpStarted = false;
 
     private Rigidbody rb;
-	private Animator anim;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-		anim = GetComponent<Animator> ();
     }
 
     private void OnCollisionStay(Collision collision)
@@ -31,7 +29,6 @@ public class JumpAbility : MonoBehaviour {
             lastGroundTime = Time.time;
             jumpCount = 0;
             jumpStarted = false;
-			anim.SetBool ("isGrounded", true);
         }
     }
     /// <summary>
@@ -45,7 +42,6 @@ public class JumpAbility : MonoBehaviour {
             jumpStarted = true;
             jumpCount++;
             lastGroundTime = Time.time;
-			anim.SetBool ("isGrounded", false);
         }
         if (Time.time <= lastGroundTime + jumpDuration)
         {
@@ -62,7 +58,6 @@ public class JumpAbility : MonoBehaviour {
             {
                 jumpStarted = false;
             }
-			//anim.SetBool ("isGrounded", true);
         }
     }
 }

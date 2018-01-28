@@ -12,7 +12,7 @@ public class SnailController : MonoBehaviour
     [SerializeField]
     private int health;//current health
 
-    private bool playerRiding = false;
+    public bool playerRiding = false;
     private bool facingRight = true;
 
     private PlayerController pc;
