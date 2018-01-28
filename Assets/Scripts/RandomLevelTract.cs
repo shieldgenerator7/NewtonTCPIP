@@ -8,9 +8,14 @@ public class RandomLevelTract : MonoBehaviour {
 	//persistant data that follows the player. 
 	//Change in the menu and utalize in the random stage.
 	public int RandomLevelStages;
+	public LevelManager lvmgr;
 
 	void Start(){
 		RandomLevelStages = 5;
+		GameObject mgr = GameObject.Find ("GameManager");
+		lvmgr = mgr.GetComponent <LevelManager>();
+
+
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -27,11 +32,15 @@ public class RandomLevelTract : MonoBehaviour {
 
 
 	void increaseStage(){
-		RandomLevelStages = RandomLevelStages + 1; 
+		lvmgr.RandomLevelStageNumber++;
 		//add code to show the stage level
+		if (lvmgr.RandomLevelStageNumber > 100)
+			lvmgr.RandomLevelStageNumber = 100;
 	}
 
 	void decreaseStage(){
-		RandomLevelStages--;
+		lvmgr.RandomLevelStageNumber--;
+		if (lvmgr.RandomLevelStageNumber < 1)
+			lvmgr.RandomLevelStageNumber = 1;
 	}
 }

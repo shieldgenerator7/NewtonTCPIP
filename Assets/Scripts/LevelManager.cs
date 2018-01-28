@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
 
     private static LevelManager instance;
 
+	public int RandomLevelStageNumber;
+
     // Use this for initialization
     void Start()
     {
@@ -25,6 +27,8 @@ public class LevelManager : MonoBehaviour
 
 		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Additive);
         //LoadLevel(currentLevelNumber);
+
+		RandomLevelStageNumber = 10;
     }
 
     public static void LoadNextLevel()
