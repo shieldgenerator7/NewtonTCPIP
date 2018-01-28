@@ -21,6 +21,11 @@ public class JumpAbility : MonoBehaviour {
     private Vector3 startSize;
 
     private Rigidbody rb;
+	public AudioSource sounds;
+	public AudioClip newtonJumpSound;
+	public int soundVolume = 1;
+	private bool alreadyPlayed;
+
 
     // Use this for initialization
     void Start()
@@ -63,6 +68,12 @@ public class JumpAbility : MonoBehaviour {
             jumpCount++;
             lastGroundTime = Time.time;
             stretchSquash = stretchSize;
+
+			if (!alreadyPlayed) {
+				sounds.PlayOneShot (newtonJumpSound, soundVolume);
+				alreadyPlayed = true;
+			}
+
         }
         if (Time.time <= lastGroundTime + jumpDuration)
         {
@@ -84,6 +95,10 @@ public class JumpAbility : MonoBehaviour {
                 jumpStarted = false;
             }
             stretchSquash = squashSize;
+
+			//set jump sound played to false;
+			alreadyPlayed = false;
+
         }
     }
 }

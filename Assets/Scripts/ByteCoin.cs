@@ -8,6 +8,8 @@ public class ByteCoin : MonoBehaviour {
 
     public int value = 1;//how many squares of the bg picture this byte coin restores
 
+	public AudioSource soundPickup;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +21,7 @@ public class ByteCoin : MonoBehaviour {
         {
             valueCollected += value;
             BackgroundPicPiecer.ShowPixels(value);
+			soundPickup.enabled = true;
             Destroy(gameObject);
         }
     }
