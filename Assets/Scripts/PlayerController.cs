@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 7.0f;
-	public bool facingRight = true;
+    public bool facingRight = true;
 
     private Rigidbody rb;
     private JumpAbility ja;
+    private SnailController ridingSnail = null;
 
     // Use this for initialization
     void Start()
@@ -19,12 +20,26 @@ public class PlayerController : MonoBehaviour
 
     public void jump(float amount)
     {
-        ja.jump(amount);
+        if (ridingSnail == null)
+        {
+            ja.jump(amount);
+        }
+        else
+        {
+            ridingSnail.jump(amount);
+        }
     }
 
     public void cancelJump()
     {
-        ja.cancelJump();
+        if (ridingSnail == null)
+        {
+            ja.cancelJump();
+        }
+        else
+        {
+            ridingSnail.cancelJump();
+        }
     }
 
     /// <summary>
@@ -35,7 +50,14 @@ public class PlayerController : MonoBehaviour
     /// <param name="direction"></param>
     public void moveHorizontally(float direction)
     {
-        rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+        if (ridingSnail == null)
+        {
+            rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = ridingSnail.moveHorizontally(direction);
+        }
         Flip(direction);
     }
 
@@ -50,17 +72,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-	public void Flip(bool right)
-	{
+    public void Flip(bool right)
+    {
         facingRight = right;
         float r = 1;
-		if (!right)
+        if (!right)
         {
             r = -1;
         }
         Vector3 cs = transform.localScale;
         transform.localScale = new Vector3(Mathf.Abs(cs.x) * r, cs.y, cs.z);
-	}
+    }
 
     /// <summary>
     /// Resets the player's position after he fails
@@ -68,5 +90,17 @@ public class PlayerController : MonoBehaviour
     public void respawn()
     {
         CheckpointChecker.respawnPlayer(gameObject);
+    }
+
+    public void rideSnail(SnailController sc, bool ride)
+    {
+        if (ride)
+        {
+            ridingSnail = sc;
+        }
+        else
+        {
+            ridingSnail = null;
+        }
     }
 }

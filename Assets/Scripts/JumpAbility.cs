@@ -10,7 +10,8 @@ public class JumpAbility : MonoBehaviour {
 
     private float lastGroundTime;//the last time he was on the ground
     [SerializeField]
-    private int jumpCount = 0;
+    public int jumpCount = 0;
+    [SerializeField]
     private bool jumpStarted = false;
 
     private Rigidbody rb;
