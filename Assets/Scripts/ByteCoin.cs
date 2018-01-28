@@ -6,7 +6,7 @@ public class ByteCoin : MonoBehaviour {
 
     public static int valueCollected = 0;//the total value collected
 
-    int value = 1;//how many squares of the bg picture this byte coin restores
+    public int value = 1;//how many squares of the bg picture this byte coin restores
 
 	// Use this for initialization
 	void Start () {
