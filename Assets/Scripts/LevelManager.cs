@@ -8,12 +8,18 @@ public class LevelManager : MonoBehaviour
     public bool debug = false;
     public int debugStartLevelNumber = 1;
 
+    [SerializeField]
     private Scene currentLevel;
     private int currentLevelNumber = 1;
+    public static Scene Level
+    {
+        get { return instance.currentLevel; }
+        private set { }
+    }
 
     private static LevelManager instance;
 
-	public int RandomLevelStageNumber;
+    public int RandomLevelStageNumber;
 
     // Use this for initialization
     void Start()
@@ -35,9 +41,13 @@ public class LevelManager : MonoBehaviour
         {
             if (SceneManager.GetSceneByName("Level" + debugStartLevelNumber).isLoaded)
             {
-                SceneManager.UnloadSceneAsync("Level" + debugStartLevelNumber);
+                currentLevel = SceneManager.GetSceneByName("Level" + debugStartLevelNumber);
+                currentLevelNumber = debugStartLevelNumber;
             }
-            LoadLevel(debugStartLevelNumber);
+            else
+            {
+                LoadLevel(debugStartLevelNumber);
+            }
         }
 
         RandomLevelStageNumber = 10;
@@ -60,17 +70,19 @@ public class LevelManager : MonoBehaviour
             if (SceneManager.GetSceneByName("Level" + currentLevelNumber).isLoaded)
             {
                 SceneManager.UnloadSceneAsync("Level" + currentLevelNumber);
-			}else if (SceneManager.GetSceneByName("RandomLevel").isLoaded)
-				{
-				SceneManager.UnloadSceneAsync("RandomLevel");
-				}
+            }
+            else if (SceneManager.GetSceneByName("RandomLevel").isLoaded)
+            {
+                SceneManager.UnloadSceneAsync("RandomLevel");
+            }
             SceneManager.LoadScene("Level" + levelNumber, LoadSceneMode.Additive);
             currentLevelNumber = levelNumber;
             currentLevel = SceneManager.GetSceneByName("Level" + currentLevelNumber);
         }
     }
 
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.P)){LoadNextLevel ();}
-	}
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P)) { LoadNextLevel(); }
+    }
 }
