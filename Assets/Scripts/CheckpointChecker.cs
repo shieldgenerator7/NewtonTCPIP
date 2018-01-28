@@ -31,5 +31,6 @@ public class CheckpointChecker : MonoBehaviour {
     public static void respawnPlayer(GameObject go)
     {
         go.transform.position = currentCP.gameObject.transform.position;
+        go.GetComponent<PlayerController>().rideSnail(null, false);
     }
 }

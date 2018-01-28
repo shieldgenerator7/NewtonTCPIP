@@ -22,7 +22,9 @@ public class LevelManager : MonoBehaviour
         {
             throw new UnityException("Duplicate LevelManagers!");
         }
-        LoadLevel(currentLevelNumber);
+
+		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Additive);
+        //LoadLevel(currentLevelNumber);
     }
 
     public static void LoadNextLevel()
