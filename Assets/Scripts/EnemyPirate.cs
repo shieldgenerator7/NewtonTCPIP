@@ -11,11 +11,14 @@ public class EnemyPirate : Enemy {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        if (Mathf.Abs(transform.position.x - startPos.x) >= moveDistance)
+        if (!isStunned())
         {
-            moveDirection *= -1;
+            if (Mathf.Abs(transform.position.x - startPos.x) >= moveDistance)
+            {
+                moveDirection *= -1;
+            }
+            rb.velocity = new Vector3(moveDirection * moveSpeed, rb.velocity.y);
         }
-        rb.velocity = new Vector3(moveDirection * moveSpeed, rb.velocity.y);
 	}
 
     

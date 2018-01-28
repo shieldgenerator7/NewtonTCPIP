@@ -14,6 +14,9 @@ public class EnemyDDOS : Enemy {
 
     // Update is called once per frame
     void Update () {
-        ja.jump(1);
+        if (!isStunned())
+        {
+            ja.jump(1);
+        }
 	}
 }

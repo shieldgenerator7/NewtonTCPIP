@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour {
 
     public float moveSpeed = 3;//how fast he moves
 
+    private float stunDuration;//if its stunned, how long for
+    private float lastStunTime;//the last time it was stunned
+
     protected Vector3 startPos;
     protected Rigidbody rb;
     protected GameObject player;
@@ -30,5 +33,16 @@ public class Enemy : MonoBehaviour {
     protected virtual void onCollisionExtra()
     {
 
+    }
+
+    public void stun(float duration)
+    {
+        stunDuration = duration;
+        lastStunTime = Time.time;
+    }
+
+    public bool isStunned()
+    {
+        return Time.time < stunDuration + lastStunTime;
     }
 }

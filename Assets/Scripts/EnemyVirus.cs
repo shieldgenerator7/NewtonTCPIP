@@ -19,16 +19,19 @@ public class EnemyVirus : Enemy
     // Update is called once per frame
     void Update()
     {
-        if ((player.transform.position - transform.position).sqrMagnitude <= sightRange * sightRange)
+        if (!isStunned())
         {
-            Vector3 cs = transform.localScale;
-            transform.localScale += Vector3.one * (growSpeed * Time.deltaTime);
-        }
-        else
-        {
-            if (transform.localScale.sqrMagnitude > startSize.sqrMagnitude)
+            if ((player.transform.position - transform.position).sqrMagnitude <= sightRange * sightRange)
             {
-                transform.localScale -= Vector3.one * (growSpeed * Time.deltaTime);
+                Vector3 cs = transform.localScale;
+                transform.localScale += Vector3.one * (growSpeed * Time.deltaTime);
+            }
+            else
+            {
+                if (transform.localScale.sqrMagnitude > startSize.sqrMagnitude)
+                {
+                    transform.localScale -= Vector3.one * (growSpeed * Time.deltaTime);
+                }
             }
         }
     }
