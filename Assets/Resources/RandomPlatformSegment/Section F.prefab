@@ -2124,6 +2124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114197023208810722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2141,6 +2142,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114217148633698226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2170,6 +2174,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114342320707917822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2187,6 +2194,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114429120695423746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2199,6 +2209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114454432836618610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2258,6 +2269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114670692484128886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2282,6 +2294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  coinPickup: {fileID: 8300000, guid: 0a8d97717040e3b4da7f8d93add31d5f, type: 3}
 --- !u!114 &114706206765836680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2299,6 +2312,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114770615417250304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2316,6 +2332,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!114 &114928972519538376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2333,6 +2352,9 @@ MonoBehaviour:
   jumpCount: 0
   jumpStarted: 0
   stretchSquash: 1.1
+  sounds: {fileID: 0}
+  newtonJumpSound: {fileID: 0}
+  soundVolume: 1
 --- !u!135 &135015650421046076
 SphereCollider:
   m_ObjectHideFlags: 1
