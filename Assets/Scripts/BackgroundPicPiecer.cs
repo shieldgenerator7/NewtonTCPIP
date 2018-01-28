@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BackgroundPicPiecer : MonoBehaviour
 {
 
     List<GameObject> pieces = new List<GameObject>();
-
+	public Material backgroundMaterial;
+	public Texture backgroundTexture;
     private static BackgroundPicPiecer instance;
 
     // Use this for initialization
     void Start()
     {
+		backgroundMaterial.mainTexture = backgroundTexture;
+
         instance = this;
         foreach (Transform t in transform)
         {
