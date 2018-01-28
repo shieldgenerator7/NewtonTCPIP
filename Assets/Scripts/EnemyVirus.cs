@@ -32,4 +32,9 @@ public class EnemyVirus : Enemy
             }
         }
     }
+
+    protected override void onCollisionExtra()
+    {
+        transform.localScale = startSize;
+    }
 }
