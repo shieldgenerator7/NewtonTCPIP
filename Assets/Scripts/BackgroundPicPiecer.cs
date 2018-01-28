@@ -11,6 +11,9 @@ public class BackgroundPicPiecer : MonoBehaviour
 	public Texture backgroundTexture;
     private static BackgroundPicPiecer instance;
 
+	public GameObject camman;
+	public Vector3 background = new Vector3(0,0,60);
+
     // Use this for initialization
     void Start()
     {
@@ -25,6 +28,8 @@ public class BackgroundPicPiecer : MonoBehaviour
                 t.gameObject.SetActive(false);
             }
         }
+
+		camman = GameObject.Find ("Main Camera");	
     }
 
     /// <summary>
@@ -46,4 +51,8 @@ public class BackgroundPicPiecer : MonoBehaviour
             pieces.RemoveAt(index);
         }
     }
+
+	void Update(){
+		transform.position = camman.transform.position +background;
+	}
 }
