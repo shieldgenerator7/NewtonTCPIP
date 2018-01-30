@@ -15,6 +15,7 @@ public class EnemyBOSSAttack : MonoBehaviour
     public int enemySpawnAmount = 3;//how many random enemies to spawn
     public float enemySpawnDelay = 0.5f;//how long between each enemy spawn
     public float throwScale = 0.5f;
+    public float throwStunDuration = 3.0f;
 
     private float movementDirection;
     private float startTime = 0;//0 = not started
@@ -73,7 +74,7 @@ public class EnemyBOSSAttack : MonoBehaviour
                 rb.velocity 
                 + Vector3.up 
                 + (Vector3.right * (pc.gameObject.transform.position.x - transform.position.x)*throwScale);
-            enemy.GetComponent<Enemy>().stun(1.5f);
+            enemy.GetComponent<Enemy>().stun(throwStunDuration);
             enemy.AddComponent<OnTouchDestroy>();
             SceneManager.MoveGameObjectToScene(enemy, LevelManager.Level);
         }
