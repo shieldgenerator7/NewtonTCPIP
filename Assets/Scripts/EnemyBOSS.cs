@@ -48,12 +48,24 @@ public class EnemyBOSS : Enemy {
         }
 	}
 
+    protected override void onCollisionExtra()
+    {
+        if (currentAttack != null)
+        {
+            currentAttack.finish();
+            currentAttack = null;
+        }
+    }
+
     public void kill()
     {
         dead = true;
         internalCheckpoint.transform.parent = null;
-        currentAttack.finish();
-        currentAttack = null;
+        if (currentAttack != null)
+        {
+            currentAttack.finish();
+            currentAttack = null;
+        }
         GetComponent<JumpAbility>().cancelJump();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 7.0f;
-    public bool facingRight = true;
+    public bool facingRight = true;    
 
     private Rigidbody rb;
     private JumpAbility ja;
@@ -16,6 +16,22 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         ja = GetComponent<JumpAbility>();
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Enemy"))
+        {
+            //Debug.Log("Collision contacts: " + collision.contacts.Length);
+            //if (collision.contacts.Length > 10)
+            //{
+                collision.gameObject.GetComponent<Rigidbody>().velocity = rb.velocity;
+                //collision.gameObject.transform.position = transform.position;
+            //    collision.gameObject.transform.parent = transform;
+            //    Destroy(collision.gameObject.GetComponent<Rigidbody>());
+            //    collision.gameObject.transform.localPosition = Vector3.zero;
+            //}
+        }
     }
 
     public void jump(float amount)

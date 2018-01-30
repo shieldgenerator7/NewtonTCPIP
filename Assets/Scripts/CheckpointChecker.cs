@@ -36,5 +36,12 @@ public class CheckpointChecker : MonoBehaviour {
         {
             sc.playerRiding = false;
         }
+        foreach (Transform t in go.transform)
+        {
+            if (t.gameObject.CompareTag("Enemy"))
+            {
+                Destroy(t.gameObject);
+            }
+        }
     }
 }

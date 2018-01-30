@@ -14,7 +14,9 @@ public class EnemyBOSSAttack : MonoBehaviour
     public List<GameObject> enemyPrefabs;//the list of enemies that can spawn on this attack
     public int enemySpawnAmount = 3;//how many random enemies to spawn
     public float enemySpawnDelay = 0.5f;//how long between each enemy spawn
+    public float throwScale = 0.5f;
 
+    private float movementDirection;
     private float startTime = 0;//0 = not started
     private float enemiesSpawned = 0;
     private float lastEnemySpawnTime = 0;
@@ -48,6 +50,8 @@ public class EnemyBOSSAttack : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
             transform.rotation = startRotation;
         }
+
+        movementDirection = Mathf.Sign(pc.gameObject.transform.position.x - transform.position.x);
     }
 
     /// <summary>
@@ -68,7 +72,7 @@ public class EnemyBOSSAttack : MonoBehaviour
             enemy.GetComponent<Rigidbody>().velocity = 
                 rb.velocity 
                 + Vector3.up 
-                + (Vector3.right * (pc.gameObject.transform.position.x - transform.position.x));
+                + (Vector3.right * (pc.gameObject.transform.position.x - transform.position.x)*throwScale);
             enemy.GetComponent<Enemy>().stun(1.5f);
             enemy.AddComponent<OnTouchDestroy>();
             SceneManager.MoveGameObjectToScene(enemy, LevelManager.Level);
@@ -79,7 +83,7 @@ public class EnemyBOSSAttack : MonoBehaviour
         }
         if (movementSpeed != 0)
         {
-            rb.velocity = new Vector3(Mathf.Sign(pc.gameObject.transform.position.x - transform.position.x) * movementSpeed, rb.velocity.y);
+            rb.velocity = new Vector3(movementDirection * movementSpeed, rb.velocity.y);
         }
     }
 

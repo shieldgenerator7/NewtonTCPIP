@@ -10,6 +10,7 @@ public class EnemySpamula : Enemy {
 
     private float lastCooldownTime;//the last time the cooldown started
     private float chaseStartTime;//when she started moving
+    private float movementDirection;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -27,7 +28,7 @@ public class EnemySpamula : Enemy {
             {
                 if (true || Physics.Raycast(new Ray(transform.position, Vector3.down), 1))
                 {
-                    rb.velocity = new Vector3(Mathf.Sign(player.transform.position.x - transform.position.x) * moveSpeed, rb.velocity.y);
+                    rb.velocity = new Vector3(movementDirection * moveSpeed, rb.velocity.y);
                 }
             }
             //If her movement is off cooldown
@@ -36,6 +37,7 @@ public class EnemySpamula : Enemy {
                 //If player is in range
                 if ((player.transform.position - transform.position).sqrMagnitude <= sightRange * sightRange)
                 {
+                    movementDirection = Mathf.Sign(player.transform.position.x - transform.position.x);
                     chaseStartTime = Time.time;
                     //Pre-prepare the cooldown
                     lastCooldownTime = Time.time + chaseDuration + cooldownDuration;
