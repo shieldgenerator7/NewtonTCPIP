@@ -128,9 +128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  cooldownDuration: 1
-  chaseDuration: 3
-  sightRange: 7
+  dead: 0
+  cooldownDuration: 0.5
+  chaseDuration: 1
+  sightRange: 9
 --- !u!135 &135358582802330896
 SphereCollider:
   m_ObjectHideFlags: 1
